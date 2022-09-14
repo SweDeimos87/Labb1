@@ -25,7 +25,7 @@ void SequenceFinder()
 {
     Console.WriteLine("Welcome to my Sequence Finder!");
     RequestUserInput();
-
+    
 }
 
 string RequestUserInput()
@@ -37,6 +37,7 @@ string RequestUserInput()
     {
         Console.WriteLine("Insert String To Sequence");
         userInput = Console.ReadLine();
+        Console.WriteLine();
         for (int i = 0; i < userInput.Length; i++)
         {
             int numberCounter = 0;
