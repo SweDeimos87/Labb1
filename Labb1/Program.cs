@@ -1,7 +1,4 @@
-﻿#pragma warning disable CS8603 // Possible null reference return.
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-
+﻿
 using System.Numerics;
 bool isProgramRunning = true;
 BigInteger sum = 0;
