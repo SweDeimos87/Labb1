@@ -1,4 +1,5 @@
-﻿#pragma warning disable CS8602 // Dereference of a possibly null reference.
+﻿#pragma warning disable CS8603 // Possible null reference return.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
 
 //29535123p4872348759764572364
@@ -45,6 +46,7 @@ string RequestUserInput()
     }
     while (!isValidInput);
     return userInput;
+
 }
 
 string CalculateSequence(string userInput)
