@@ -24,7 +24,6 @@ void SequenceFinder()
 {
     Console.WriteLine("Welcome to my Sequence Finder!");
     RequestUserInput();
-    
 }
 
 string RequestUserInput()
@@ -38,6 +37,7 @@ string RequestUserInput()
         userInput = Console.ReadLine();
         for (int i = 0; i < userInput.Length; i++)
         {
+            
             int numberCounter = 0;
 
             for (int j = i + 1; j < userInput.Length; j++)
