@@ -9,7 +9,7 @@ bool isProgramRunning = true;
 do
 {
     SequenceFinder();
-
+    
     Console.WriteLine();
     Console.WriteLine("Press ESC to Quit or the Any key to enter a new sequence.");
 
@@ -23,18 +23,36 @@ while (isProgramRunning);
 void SequenceFinder()
 {
     Console.WriteLine("Welcome to my Sequence Finder!");
-    RequestUserInput();
+    string userInput = RequestUserInput();
+    Console.WriteLine();
+    CalculateSequence(userInput);
+
 }
 
 string RequestUserInput()
 {
     string userInput;
     bool isValidInput;
-    BigInteger sum = 0;
     do
     {
         Console.WriteLine("Insert String To Sequence");
         userInput = Console.ReadLine();
+        isValidInput = !string.IsNullOrEmpty(userInput);
+        if (!isValidInput)
+        {
+            Console.WriteLine("Need more to work with");
+        }
+    }
+    while (!isValidInput);
+    return userInput;
+}
+
+string CalculateSequence(string userInput)
+{
+    
+    BigInteger sum = 0;
+    
+    {
         for (int i = 0; i < userInput.Length; i++)
         {
             
@@ -68,17 +86,6 @@ string RequestUserInput()
         }
         Console.WriteLine($"Total value of colored numbers {sum}");
 
-        isValidInput = !string.IsNullOrEmpty(userInput);
-        if (!isValidInput)
-        {
-            Console.WriteLine("You have not entered a valid input please try again..");
-        }
     }
-    while (!isValidInput);
     return userInput;
 }
-
-    
-  
-    
-
